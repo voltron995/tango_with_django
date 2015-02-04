@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}{{ page_name }}{% endblock %}
+
+{% block body_block %}
+    <h1>{{ page_name }}</h1>
+        {% if category %}
+            {% if pages %}
+            <ul>
+                {% for page in pages %}
+                <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+                <strong>No pages currently in category.</strong>
+            {% endif %}
+        {% else %}
+            <ul> The specified category </ul>{{ category_name }} <ul>does not exist!</ul>
+        {% endif %}
+
+{% endblock %}
