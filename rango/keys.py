@@ -1,1 +1,0 @@
-BING_API_KEY = '<zzlvzhVU7/janWsx4srnEBnbP71RvBb+XCvCm6dmLpk>'
